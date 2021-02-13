@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 
 import { Paciente } from "../paciente";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-paciente-form",
@@ -11,6 +12,8 @@ export class PacienteFormComponent {
   model = new Paciente(17, "Cynthia", "Prtiz", "dir", 984480415);
 
   submitted = false;
+
+  constructor(private _route: ActivatedRoute) {}
 
   onSubmit() {
     this.submitted = true;

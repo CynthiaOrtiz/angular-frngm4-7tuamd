@@ -3,11 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { PacienteFormComponent } from "../paciente-form/paciente-form.component";
 
 const routes: Routes = [
-  {
-    path: "busqueda-paciente",
-    component: PacienteFormComponent,
-    children: [{ path: "paciente-form", component: PacienteFormComponent }]
-  }
+  { path: "paciente-form", component: PacienteFormComponent }
 ];
 
 @NgModule({
