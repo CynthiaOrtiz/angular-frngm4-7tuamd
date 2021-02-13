@@ -6,9 +6,9 @@ import { PacienteFormComponent } from "./paciente-form/paciente-form.component";
 
 const routes: Routes = [
   {
-    path: "busqueda",
+    path: "busqueda-paciente",
     component: BusquedaPacienteComponent,
-    children: [{ path: "pacienteform", component: PacienteFormComponent }]
+    children: [{ path: "paciente-form", component: PacienteFormComponent }]
   },
 
   { path: "", redirectTo: "/busqueda", pathMatch: "full" }
