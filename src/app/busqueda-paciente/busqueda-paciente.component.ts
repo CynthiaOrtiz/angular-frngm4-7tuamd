@@ -11,10 +11,10 @@ export class BusquedaPacienteComponent implements OnInit {
 
   ngOnInit() {}
 
-  newPaciente() {
+  /**newPaciente() {
     this.router.navigate([
       "/busqueda",
       { outlets: { detail: ["pacienteform", "1"] } }
     ]);
-  }
+  }*/
 }
