@@ -3,11 +3,11 @@ import { Component } from "@angular/core";
 import { Paciente } from "../paciente";
 
 @Component({
-  selector: "app-hero-form",
-  templateUrl: "./hero-form.component.html",
-  styleUrls: ["./hero-form.component.css"]
+  selector: "app-paciente-form",
+  templateUrl: "./paciente-form.component.html",
+  styleUrls: ["./paciente-form.component.css"]
 })
-export class HeroFormComponent {
+export class PacienteFormComponent {
   model = new Paciente(17, "Cynthia", "Prtiz", "dir", 984480415);
 
   submitted = false;

@@ -3,12 +3,17 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { HeroFormComponent } from "./hero-form/hero-form.component";
+import { PacienteFormComponent } from "./paciente-form/paciente-form.component";
+
 import { BusquedaPacienteComponent } from "./busqueda-paciente/busqueda-paciente.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HeroFormComponent, BusquedaPacienteComponent],
+  declarations: [
+    AppComponent,
+    PacienteFormComponent,
+    BusquedaPacienteComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
