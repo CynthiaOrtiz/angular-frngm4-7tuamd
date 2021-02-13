@@ -7,11 +7,11 @@ import { PacienteFormComponent } from "./paciente-form/paciente-form.component";
 const routes: Routes = [
   {
     path: "busqueda-paciente",
-    component: BusquedaPacienteComponent,
-    children: [{ path: "paciente-form", component: PacienteFormComponent }]
+    component: BusquedaPacienteComponent
   },
 
-  { path: "", redirectTo: "/busqueda-paciente", pathMatch: "full" }
+  { path: "", redirectTo: "/busqueda-paciente", pathMatch: "full" },
+  { path: "paciente-form", component: PacienteFormComponent }
 ];
 
 @NgModule({
