@@ -7,8 +7,10 @@ import { PacienteFormComponent } from "./paciente-form/paciente-form.component";
 
 import { BusquedaPacienteComponent } from "./busqueda-paciente/busqueda-paciente.component";
 
+import { AppRoutingModule } from "./app-routing.module";
+
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   declarations: [
     AppComponent,
     PacienteFormComponent,
