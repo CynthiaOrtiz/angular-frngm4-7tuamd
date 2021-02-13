@@ -9,7 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./paciente-form.component.css"]
 })
 export class PacienteFormComponent {
-  model = new Paciente(17, "Cynthia", "Prtiz", "dir", 984480415);
+  model = new Paciente(17, "Cya", "Pz", "dir", 915);
 
   submitted = false;
 
@@ -29,11 +29,6 @@ export class PacienteFormComponent {
   newHero() {
     this.model = new Paciente(0, "", "", "", 0);
   }
-
-  //////// NOT SHOWN IN DOCS ////////
-
-  // Reveal in html:
-  //   Name via form.controls = {{showFormControls(heroForm)}}
 
   /////////////////////////////
 }
