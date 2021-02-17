@@ -11,13 +11,11 @@ import { ActivatedRoute } from "@angular/router";
 export class PacienteFormComponent {
   model = new Paciente(17, "Cya", "Pz", "dir", 915);
 
-  submitted = false;
-
   constructor(private _route: ActivatedRoute) {}
 
   onSubmit() {
-    this.submitted = true;
     this.newHero();
+
     //ir a la pagina de busqueda de paciente
   }
 
