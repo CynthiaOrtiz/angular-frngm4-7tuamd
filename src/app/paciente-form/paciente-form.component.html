@@ -1,57 +1,61 @@
 <div class="container">
 	<div>
 		<h1>Paciente</h1>
-		<form (ngSubmit)="guardarPaciente()" #pacienteForm="ngForm">
+		<form (ngSubmit)="guardarPaciente()" #pacienteForm="ngForm" [hidden]="pacienteForm.valid">
+
+			<b>valid 1</b> {{pacienteForm.valid}}
+			<b>valid</b> {{pacienteForm.valid}}
+			<b>touched</b> {{pacienteForm.touched}}
+			<b>pristine</b> {{pacienteForm.pristine}}
+			<b>dirty</b> {{pacienteForm.dirty}}
+
 			<div class="form-group">
 				<label for="cedula">Cedula de identidad:</label>
 				<input type="number" class="form-control" id="cedula"
                required
                [(ngModel)]="paciente.cedula" name="cedula"
                #name="ngModel">
-
+				<div [hidden]="cedula.valid || cedula.pristine" class="alert alert-danger">
+					Cedula es requerido
+				</div>
 			</div>
-				<div class="form-group">
-					<label for="nombre">Nombre:</label>
-					<input type="text" class="form-control" id="nombre"
+			<div class="form-group">
+				<label for="nombre">Nombre:</label>
+				<input type="text" class="form-control" id="nombre"
                required
                [(ngModel)]="paciente.nombre" name="nombre"
                #name="ngModel">
-					<div [hidden]="nombre.valid || nombre.pristine" class="alert alert-danger">
-						Nombre es requerido
-					</div>
+				<div [hidden]="pacienteForm.nombre.valid || nombre.pristine" class="alert alert-danger">
+					Nombre es requerido
 				</div>
-				<div class="form-group">
-					<label for="apellido">Apellido:</label>
-					<input type="text" class="form-control" id="apellido"
+			</div>
+			<div class="form-group">
+				<label for="apellido">Apellido:</label>
+				<input type="text" class="form-control" id="apellido"
                required
                [(ngModel)]="paciente.apellido" name="apellido"
                #name="ngModel">
-					<div [hidden]="apellido.valid || apellido.pristine" class="alert alert-danger">
-						Apellido es requerido
-					</div>
+				<div [hidden]="apellido.valid || apellido.pristine" class="alert alert-danger">
+					Apellido es requerido
 				</div>
+			</div>
 
-				<div class="form-group">
-					<label for="telefono">Tel&eacute;fono:</label>
-					<input type="number" class="form-control" id="telefono"
+			<div class="form-group">
+				<label for="telefono">Tel&eacute;fono:</label>
+				<input type="number" class="form-control" id="telefono"
                [(ngModel)]="paciente.telefono" name="telefono">
       </div>
-					<div class="form-group">
-						<label for="direccion">Direcci&oacute;n:</label>
-						<input type="text" class="form-control" id="direccion"
+				<div class="form-group">
+					<label for="direccion">Direcci&oacute;n:</label>
+					<input type="text" class="form-control" id="direccion"
                [(ngModel)]="paciente.direccion" name="direccion">
       </div>
-						<div class="row text-center">
-							<button type="submit" class="btn btn-success" [disabled]="!pacienteForm.form.valid">Guardar</button>
+					<div class="row text-center">
+						<button type="submit" class="btn btn-success" [disabled]="!pacienteForm.form.valid">Guardar</button>
 
-							<button type="button" class="btn btn-default text-center" (click)="newHero(); pacienteForm.reset()">Limpiar</button>
+						<button type="button" class="btn btn-default text-center" (click)="newHero(); pacienteForm.reset()">Limpiar</button>
+					</div>
 
-						</div>
-						<b>valid 1</b> {{pacienteForm.valid}}
-						<b>valid</b> {{pacienteForm.valid}}
-						<b>touched</b> {{pacienteForm.touched}}
-						<b>pristine</b> {{pacienteForm.pristine}}
-						<b>dirty</b> {{pacienteForm.dirty}}
 		</form>
 	</div>
 </div>
