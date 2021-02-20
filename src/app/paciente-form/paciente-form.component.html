@@ -1,5 +1,8 @@
 <div class="container">
 	<div>
+		<button type="button" class="btn btn-default text-center colorbtn" (click)="goBusqueda(); pacienteForm.reset()"
+    [routerLink]="['/busqueda-paciente']"
+    >Busqueda</button>
 		<h1>Paciente</h1>
 		<form (ngSubmit)="guardarPaciente()" #pacienteForm="ngForm">
 			<div class="form-group">
@@ -59,5 +62,9 @@
 
 		.no-style .ng-invalid {
 			border-left: 1px solid #CCC
+		}
+
+		.colorbtn {
+			background-color: rgb(28 155 213 / 39%)
 		}
 	</style>

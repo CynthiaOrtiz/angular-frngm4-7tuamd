@@ -9,7 +9,7 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./paciente-form.component.css"]
 })
 export class PacienteFormComponent {
-  paciente = new Paciente(0, "", "", "", 0);
+  paciente = new Paciente(null, "", "", "", null);
 
   @ViewChild("pacienteForm", null) pacienteForm: NgForm;
   constructor(private _route: ActivatedRoute) {}
@@ -27,12 +27,15 @@ export class PacienteFormComponent {
   }
 
   newHero() {
-    this.paciente = new Paciente(0, "", "", "", 0);
+    this.paciente = new Paciente(null, "", "", "", null);
   }
   guardarPaciente() {
     console.log("guardar PAciente", this.paciente);
     this.newHero();
     this.pacienteForm.reset();
+  }
+  goBusqueda() {
+    console.log("ir a la busqueda", this.paciente);
   }
   /////////////////////////////
 }
