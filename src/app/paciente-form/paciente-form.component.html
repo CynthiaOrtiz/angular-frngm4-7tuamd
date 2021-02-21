@@ -1,8 +1,6 @@
+<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
 <div class="container">
 	<div>
-		<button type="button" class="btn btn-default text-center colorbtn" (click)="goBusqueda(); pacienteForm.reset()"
-    [routerLink]="['/busqueda-paciente']"
-    >Busqueda</button>
 		<h1>Paciente</h1>
 		<form (ngSubmit)="guardarPaciente()" #pacienteForm="ngForm">
 			<div class="form-group">
@@ -54,6 +52,10 @@
 						<button type="button" class="btn btn-default text-center" (click)="newHero(); pacienteForm.reset()">Limpiar</button>
 					</div>
 		</form>
+		<br>
+		<button mat-raised-button class="btn btn-default text-center colorbtn fas fa-arrow-circle-left" (click)="goBusqueda(); pacienteForm.reset()"
+    [routerLink]="['/busqueda-paciente']"
+    >Busqueda</button>
 	</div>
 	<style>
 		.no-style .ng-valid {
