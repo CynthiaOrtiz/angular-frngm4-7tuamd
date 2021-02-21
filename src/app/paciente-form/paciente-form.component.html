@@ -47,13 +47,14 @@
                [(ngModel)]="paciente.direccion" name="direccion">
       </div>
 					<div class="row text-center">
-						<button type="submit" class="btn btn-success" [disabled]="!pacienteForm.form.valid">Guardar</button>
+						<button type="submit" class="btn btn-success" [disabled]="!pacienteForm.form.valid" style="margin: 10px;">Guardar</button>
 
-						<button type="button" class="btn btn-default text-center" (click)="newHero(); pacienteForm.reset()">Limpiar</button>
+						<button type="button" class="btn btn-default text-center" (click)="newHero(); pacienteForm.reset()"
+            style="margin: 10px;">Limpiar</button>
 					</div>
 		</form>
 		<br>
-		<button mat-raised-button class="btn btn-default text-center colorbtn fas fa-arrow-circle-left" (click)="goBusqueda(); pacienteForm.reset()"
+		<button mat-raised-button class="btn btn-default text-center colorbtn" (click)="goBusqueda(); pacienteForm.reset()"
     [routerLink]="['/busqueda-paciente']"
     >Busqueda</button>
 	</div>
