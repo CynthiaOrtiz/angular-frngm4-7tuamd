@@ -37,6 +37,12 @@ export class PacienteFormComponent {
   goBusqueda() {
     console.log("ir a la busqueda", this.paciente);
   }
+  historiaPaciente() {
+    console.log(
+      "guardar cambios e ir a la historia del paciente",
+      this.paciente
+    );
+  }
   /////////////////////////////
 }
 

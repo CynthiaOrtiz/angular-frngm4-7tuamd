@@ -14,8 +14,14 @@ import {
   FaIconLibrary
 } from "@fortawesome/angular-fontawesome";
 
-import { fas, faStar, faFilm } from "@fortawesome/free-solid-svg-icons";
+import {
+  fas,
+  faStar,
+  faFilm,
+  faEraser
+} from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
+import { HistoriaPacienteComponent } from "./historia-paciente/historia-paciente.component";
 
 @NgModule({
   imports: [
@@ -30,14 +36,15 @@ import { far } from "@fortawesome/free-regular-svg-icons";
   declarations: [
     AppComponent,
     PacienteFormComponent,
-    BusquedaPacienteComponent
+    BusquedaPacienteComponent,
+    HistoriaPacienteComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(private library: FaIconLibrary) {
-    library.addIcons(fas, far, faStar, faFilm);
+    library.addIcons(fas, far, faStar, faFilm, faEraser);
   }
 }
 
