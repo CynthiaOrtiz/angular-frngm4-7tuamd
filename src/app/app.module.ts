@@ -37,7 +37,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 })
 export class AppModule {
   constructor(private library: FaIconLibrary) {
-    library.addIcons(fas, far, faStar);
+    library.addIcons(fas, far, faStar, faFilm);
   }
 }
 
