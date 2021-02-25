@@ -4,7 +4,11 @@ export class Paciente {
     public nombre: string,
     public apellido: string,
     public direccion: string,
-    public telefono: number
+    public telefono: number,
+    public ocupacion: string,
+    public genero: string,
+    public email: string,
+    public nacimiento: string
   ) {}
 }
 

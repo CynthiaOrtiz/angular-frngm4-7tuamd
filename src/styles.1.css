@@ -1,6 +1,7 @@
 @import url("https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

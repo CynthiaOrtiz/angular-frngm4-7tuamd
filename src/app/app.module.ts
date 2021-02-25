@@ -13,7 +13,6 @@ import {
   FontAwesomeModule,
   FaIconLibrary
 } from "@fortawesome/angular-fontawesome";
-
 import {
   fas,
   faStar,
@@ -23,6 +22,8 @@ import {
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { HistoriaPacienteComponent } from "./historia-paciente/historia-paciente.component";
 
+import { AgGridModule } from "ag-grid-angular";
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { HistoriaPacienteComponent } from "./historia-paciente/historia-paciente
     CommonModule,
     MatIconModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AgGridModule.withComponents([])
   ],
   declarations: [
     AppComponent,
