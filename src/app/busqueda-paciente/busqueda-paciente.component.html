@@ -1,3 +1,10 @@
+<style lang="scss">
+	@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+	@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+	.ag-theme-alpine {
+		@include ag-theme-alpine((odd-row-background-color: #CFD8DC));
+</style>
 <button mat-raised-button [routerLink]="['/paciente-form']">
   <fa-icon [icon]="['fas', 'star']"></fa-icon>Nuevo
 </button>
