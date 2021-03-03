@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Paciente } from "../paciente";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-busqueda-paciente",
@@ -8,8 +9,8 @@ import { Paciente } from "../paciente";
   styleUrls: ["./busqueda-paciente.component.css"]
 })
 export class BusquedaPacienteComponent implements OnInit {
-  paciente = new Paciente(null, "", "", "", null);
-
+  paciente = new Paciente(null, "", "", "", null, "", "", "", "");
+  rowData: any[];
   columnDefs = [
     { field: "identificador", sortable: true, filter: true },
     { field: "nombre", sortable: true, filter: true },
@@ -22,9 +23,13 @@ export class BusquedaPacienteComponent implements OnInit {
     { field: "mail", sortable: true, filter: true },
     { field: "nacimiento", sortable: true, filter: true }
   ];
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    //this.rowData = this.http.get(
+    // "https://www.ag-grid.com/example-assets/small-row-data.json"
+    //);
+  }
 
   buscarPaciente() {
     console.log("buscar paciente", this.paciente);

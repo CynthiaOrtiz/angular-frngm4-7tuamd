@@ -23,6 +23,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { HistoriaPacienteComponent } from "./historia-paciente/historia-paciente.component";
 
 import { AgGridModule } from "ag-grid-angular";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { AgGridModule } from "ag-grid-angular";
     MatIconModule,
     MatButtonModule,
     FontAwesomeModule,
+    HttpClientModule,
     AgGridModule.withComponents([])
   ],
   declarations: [
