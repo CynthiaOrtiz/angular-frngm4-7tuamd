@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Paciente } from "../paciente";
 import { HttpClient } from "@angular/common/http";
@@ -10,50 +10,10 @@ import { HttpClient } from "@angular/common/http";
 })
 export class BusquedaPacienteComponent implements OnInit {
   paciente = new Paciente(null, "", "", "", null, "", "", "", "");
-  rowData: any[];
-  columnDefs = [
-    {
-      headerName: "cedula",
-      field: "identificador",
-      sortable: true,
-      filter: true
-    },
-    { headerName: "nombre", field: "nombre", sortable: true, filter: true },
-    { headerName: "apellido", field: "apellido", sortable: true, filter: true },
-    {
-      headerName: "direccion",
-      field: "direccion",
-      sortable: true,
-      filter: true
-    },
-    { headerName: "telefono", field: "telefono", sortable: true, filter: true },
-    {
-      headerName: "ocupacion",
-      field: "ocupacion",
-      sortable: true,
-      filter: true
-    },
-    { headerName: "genero", field: "genero", sortable: true, filter: true },
-    { headerName: "mail", field: "mail", sortable: true, filter: true },
-    {
-      headerName: "nacimiento",
-      field: "nacimiento",
-      sortable: true,
-      filter: true
-    }
-  ];
-  constructor(private router: Router, private http: HttpClient) {
-    this.rowData = [
-      {
-        identificador: 5,
-        nombre: 10,
-        apellido: 10,
-        direccion: 15,
-        telefono: 15,
-        ocupacion: 20
-      }
-    ];
-  }
+
+  public pacientes = [];
+
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit() {
     //this.rowData = this.http.get(
@@ -62,7 +22,31 @@ export class BusquedaPacienteComponent implements OnInit {
   }
 
   buscarPaciente() {
-    console.log("buscar paciente", this.paciente);
+    let paciente = new Paciente(
+      111111111111,
+      "asidhaosudhais",
+      "sdfghsdfgfgh",
+      "sdfgdfgdfg",
+      654654,
+      "sdfgsdfg",
+      "sdfgsdfgdfg",
+      "sdfgdfgsd",
+      "dfgsdfgsdf"
+    );
+    let paciente2 = new Paciente(
+      111111111111,
+      "asidhaosudhais",
+      "sdfghsdfgfgh",
+      "sdfgdfgdfg",
+      654654,
+      "sdfgsdfg",
+      "sdfgsdfgdfg",
+      "email",
+      "nacime"
+    );
+    this.pacientes.push(paciente);
+    this.pacientes.push(paciente2);
+    console.log("buscar paciente", this.pacientes);
   }
 
   limpiarFiltros() {
