@@ -34,13 +34,13 @@ export class BusquedaPacienteComponent implements OnInit {
       "dfgsdfgsdf"
     );
     let paciente2 = new Paciente(
-      111111111111,
-      "asidhaosudhais",
-      "sdfghsdfgfgh",
-      "sdfgdfgdfg",
+      222222,
+      "dddddd",
+      "ddddd",
+      "dddd",
       654654,
-      "sdfgsdfg",
-      "sdfgsdfgdfg",
+      "ddd",
+      "ddd",
       "email",
       "nacime"
     );
@@ -51,6 +51,10 @@ export class BusquedaPacienteComponent implements OnInit {
 
   limpiarFiltros() {
     console.log("limpiar filtros", this.paciente);
+  }
+
+  editarPaciente(pacienteEdit) {
+    console.log("editar ", pacienteEdit);
   }
   /**newPaciente() {
     this.router.navigate([
