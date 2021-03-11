@@ -3,6 +3,7 @@ import { Component, ViewChild } from "@angular/core";
 import { Paciente } from "../paciente";
 import { ActivatedRoute } from "@angular/router";
 import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-paciente-form",
   templateUrl: "./paciente-form.component.html",
@@ -12,7 +13,21 @@ export class PacienteFormComponent {
   paciente = new Paciente(null, "", "", "", null, "", "", "", "");
 
   @ViewChild("pacienteForm", null) pacienteForm: NgForm;
-  constructor(private _route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
+  ngOnInit() {
+    // snapshot way
+    console.log(
+      "thing",
+      this.route,
+      this.route.snapshot.queryParamMap.get("paciente")
+    );
+
+    // observable way
+    this.route.paramMap.subscribe(params => {
+      console.log(params.keys);
+      console.log(params.get("paciente"));
+    });
+  }
 
   onSubmit() {
     console.log("SUBMIT");

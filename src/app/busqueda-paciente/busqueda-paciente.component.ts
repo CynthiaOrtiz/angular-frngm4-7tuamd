@@ -55,6 +55,9 @@ export class BusquedaPacienteComponent implements OnInit {
 
   editarPaciente(pacienteEdit) {
     console.log("editar ", pacienteEdit);
+    this.router.navigate(["paciente-form"], {
+      queryParams: { nomrbe: pacienteEdit.nombre }
+    });
   }
   /**newPaciente() {
     this.router.navigate([
