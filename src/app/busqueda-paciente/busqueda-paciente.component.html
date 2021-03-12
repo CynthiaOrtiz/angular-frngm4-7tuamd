@@ -5,14 +5,14 @@
 <div class="container">
   <div>
     <h1>Buscar Paciente</h1>
-    <form (ngSubmit)="buscarPaciente()" #buscarForm="ngForm">
+    <form (ngSubmit)="buscarPaciente()" #buscarForm="ngForm" style="width: 50%">
       <div style="padding: 5px;">
         <label for="cedula" style="padding: inherit;"
           >Cedula de identidad:</label>
         <input
           type="number"
           id="cedula"
-          style="width:40%"
+          style="width:210px"
           [(ngModel)]="paciente.cedula"
           name="cedula"
           #name="ngModel"
@@ -23,7 +23,7 @@
         <input
           type="string"
           id="nombre"
-          style="width:40%"
+          style="width:300px"
           [(ngModel)]="paciente.nombre"
           name="nombre"
           #name="ngModel"
