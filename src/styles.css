@@ -68,13 +68,31 @@ nav a.active {
 
 .btn-success {
   color: #fff;
-  background-color: #ec5caa;
-  border-color: #ec5caa;
+  background-color: #d45cec;
+  border-color: #d45cec;
 }
 .btn-success:hover {
   color: #fff;
-  background-color: #e63593 !important;
-  border-color: #e63593 !important;
+  background-color: #b435e6 !important;
+  border-color: #b435e6 !important;
+}
+
+.btn-success.focus,
+.btn-success:focus {
+  color: #fff;
+  background-color: #d45cec;
+  border-color: #b435e6;
+}
+
+.btn-action {
+  color: #fff;
+  background-color: #d282f7;
+  border-color: #c959eb;
+}
+.btn-action:hover {
+  color: #fff;
+  background-color: #be65f1 !important;
+  border-color: #c252ee !important;
 }
 
 /* Add application styles & imports to this file! */

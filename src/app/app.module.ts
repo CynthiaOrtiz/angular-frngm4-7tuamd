@@ -24,7 +24,7 @@ import { HistoriaPacienteComponent } from "./historia-paciente/historia-paciente
 
 import { AgGridModule } from "ag-grid-angular";
 import { HttpClientModule } from "@angular/common/http";
-
+import { DataService } from "./data.service";
 @NgModule({
   imports: [
     BrowserModule,
@@ -43,7 +43,7 @@ import { HttpClientModule } from "@angular/common/http";
     BusquedaPacienteComponent,
     HistoriaPacienteComponent
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

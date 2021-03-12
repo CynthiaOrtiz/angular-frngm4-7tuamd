@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Paciente } from "../paciente";
 import { HttpClient } from "@angular/common/http";
+import { DataService } from "../data.service";
 
 @Component({
   selector: "app-busqueda-paciente",
@@ -13,7 +14,11 @@ export class BusquedaPacienteComponent implements OnInit {
 
   public pacientes = [];
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private dataService: DataService
+  ) {}
 
   ngOnInit() {
     //this.rowData = this.http.get(
@@ -56,8 +61,10 @@ export class BusquedaPacienteComponent implements OnInit {
   editarPaciente(pacienteEdit) {
     console.log("editar ", pacienteEdit);
     this.router.navigate(["paciente-form"], {
-      queryParams: { nomrbe: pacienteEdit.nombre }
+      queryParams: { nombre: pacienteEdit.nombre, paciente: pacienteEdit }
     });
+
+    this.dataService.setNewPacienteEdit(pacienteEdit);
   }
   /**newPaciente() {
     this.router.navigate([

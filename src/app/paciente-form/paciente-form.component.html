@@ -1,11 +1,11 @@
 <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
 <div class="container">
-	<div>
-		<h1>Paciente</h1>
-		<form (ngSubmit)="guardarPaciente()" #pacienteForm="ngForm">
-			<div class="form-group">
-				<label for="cedula">Cedula de identidad:</label>
-				<input
+  <div>
+    <h1>Paciente</h1>
+    <form (ngSubmit)="guardarPaciente()" #pacienteForm="ngForm">
+      <div class="form-group">
+        <label for="cedula">Cedula de identidad:</label>
+        <input
           type="number"
           class="form-control"
           id="cedula"
@@ -14,14 +14,14 @@
           name="cedula"
           #name="ngModel"
         />
-				<div [hidden]="pacienteForm.controls.cedula.valid || pacienteForm.controls.cedula.pristine"
-					class="alert alert-danger">
-					Cedula es requerido
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="nombre">Nombre:</label>
-				<input
+        <div [hidden]="pacienteForm.controls.cedula.valid || pacienteForm.controls.cedula.pristine"
+          class="alert alert-danger">
+          Cedula es requerido
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input
           type="text"
           class="form-control"
           id="nombre"
@@ -30,14 +30,14 @@
           name="nombre"
           #name="ngModel"
         />
-				<div [hidden]="pacienteForm.controls.nombre.valid || pacienteForm.controls.nombre.pristine"
-					class="alert alert-danger">
-					Nombre es requerido
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="apellido">Apellido:</label>
-				<input
+        <div [hidden]="pacienteForm.controls.nombre.valid || pacienteForm.controls.nombre.pristine"
+          class="alert alert-danger">
+          Nombre es requerido
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input
           type="text"
           class="form-control"
           id="apellido"
@@ -46,14 +46,14 @@
           name="apellido"
           #name="ngModel"
         />
-				<div [hidden]="pacienteForm.controls.apellido.valid || pacienteForm.controls.apellido.pristine"
-					class="alert alert-danger">
-					Apellido es requerido
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="telefono">Tel&eacute;fono:</label>
-				<input
+        <div [hidden]="pacienteForm.controls.apellido.valid || pacienteForm.controls.apellido.pristine"
+          class="alert alert-danger">
+          Apellido es requerido
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Tel&eacute;fono:</label>
+        <input
           type="number"
           class="form-control"
           id="telefono"
@@ -61,9 +61,9 @@
           name="telefono"
         />
       </div>
-				<div class="form-group">
-					<label for="direccion">Direcci&oacute;n:</label>
-					<input
+      <div class="form-group">
+        <label for="direccion">Direcci&oacute;n:</label>
+        <input
           type="text"
           class="form-control"
           id="direccion"
@@ -71,9 +71,9 @@
           name="direccion"
         />
       </div>
-					<div class="form-group">
-						<label for="nacimiento">Fecha nacimiento:</label>
-						<input
+      <div class="form-group">
+        <label for="nacimiento">Fecha nacimiento:</label>
+        <input
           type="text"
           class="form-control"
           id="nacimiento"
@@ -82,8 +82,8 @@
         />
       </div>
 
-						<div class="row text-center">
-							<button
+      <div class="row text-center">
+        <button
           type="submit"
           class="btn btn-success"
           [disabled]="!pacienteForm.form.valid"
@@ -92,7 +92,7 @@
           Guardar
         </button>
 
-							<button
+        <button
           type="button"
           class="btn btn-default text-center"
           (click)="newHero(); pacienteForm.reset()"
@@ -102,9 +102,9 @@
           <fa-icon [icon]="['fas', 'eraser']"></fa-icon>
         </button>
 
-							<button
+        <button
           type="button"
-          class="btn btn-default text-center"
+          class="btn btn-default text-center btn-action"
           (click)="historiaPaciente()"
           [routerLink]="['/historia-paciente']"
           style="margin: 5px;"
@@ -112,29 +112,28 @@
         >
           Historia
         </button>
-						</div>
-		</form>
-		<br />
-		<button
-      mat-raised-button
-      class="btn btn-default text-center colorbtn"
+      </div>
+    </form>
+    <br />
+    <button
+      class="btn btn-default text-center btn-action"
       (click)="goBusqueda(); pacienteForm.reset()"
       [routerLink]="['/busqueda-paciente']"
     >
       Busqueda
     </button>
-	</div>
-	<style>
-		.no-style .ng-valid {
-			border-left: 1px solid #ccc;
-		}
+  </div>
+  <style>
+    .no-style .ng-valid {
+      border-left: 1px solid #ccc;
+    }
 
-		.no-style .ng-invalid {
-			border-left: 1px solid #ccc;
-		}
+    .no-style .ng-invalid {
+      border-left: 1px solid #ccc;
+    }
 
-		.colorbtn {
-			background-color: rgb(28 155 213 / 39%);
-		}
-	</style>
+    .colorbtn {
+      background-color: rgb(28 155 213 / 39%);
+    }
+  </style>
 </div>
