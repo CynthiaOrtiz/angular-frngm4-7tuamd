@@ -95,6 +95,14 @@ nav a.active {
   border-color: #c252ee !important;
 }
 
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #be65f1;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #e71916;
+}
 /* Add application styles & imports to this file! */
 
 /*
