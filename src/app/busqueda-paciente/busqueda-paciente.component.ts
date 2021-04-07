@@ -21,9 +21,10 @@ export class BusquedaPacienteComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    //this.rowData = this.http.get(
-    // "https://www.ag-grid.com/example-assets/small-row-data.json"
-    //);
+    console.log(
+      "buscar pacientes TODOS: ",
+      this.http.get("https://localhost:8080/example-assets/small-row-data.json")
+    );
   }
 
   buscarPaciente() {
@@ -52,6 +53,12 @@ export class BusquedaPacienteComponent implements OnInit {
     this.pacientes.push(paciente);
     this.pacientes.push(paciente2);
     console.log("buscar paciente", this.pacientes);
+    console.log(
+      "buscar pacientes TODOS1: ",
+      this.http.get(
+        "localhost:8080/adminPacServ/api/public/adminpaciente/buscarPacientes"
+      )
+    );
   }
 
   limpiarFiltros() {
