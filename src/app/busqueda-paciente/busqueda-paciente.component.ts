@@ -22,7 +22,7 @@ export class BusquedaPacienteComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .get('https://localhost:8080/example-assets/small-row-data.json')
+      .get('http://localhost:8080/example-assets/small-row-data.json')
       .subscribe(data => {
         console.log('buscar pacientes TODOS: ', data);
       });
@@ -54,12 +54,11 @@ export class BusquedaPacienteComponent implements OnInit {
     this.pacientes.push(paciente);
     this.pacientes.push(paciente2);
     console.log('buscar paciente', this.pacientes);
-    console.log(
-      'buscar pacientes TODOS1: ',
-      this.http.get(
-        'localhost:8080/adminPacServ/api/public/adminpaciente/buscarPacientes'
-      )
-    );
+    this.http
+      .get('http://localhost:8080/example-assets/small-row-data.json')
+      .subscribe(data => {
+        console.log('buscar pacientes TODOS1: ', data);
+      });
   }
 
   limpiarFiltros() {
